@@ -43,13 +43,16 @@ int WINAPI WinMain(HINSTANCE,HINSTANCE,LPSTR,int)
 
 		// 入力関連の毎フレーム処理
 		input->Update();
+
 		// ゲームシーンの毎フレーム処理
 		gameScene->Update();
 
 		// 描画開始
 		dxCommon->PreDraw();
+
 		// ゲームシーンの描画
 		gameScene->Draw();
+
 		// 描画終了
 		dxCommon->PostDraw();
 	}
