@@ -36,6 +36,32 @@ public: // サブクラス
 		XMMATRIX mat;	// ３Ｄ変換行列
 	};
 
+	//マテリアル
+	struct Material
+	{
+		//マテリアル名
+		std::string name;
+		//アンビエント影響度
+		XMFLOAT3 ambient;
+		//ディフューズ影響度
+		XMFLOAT3 diffuse;
+		//スペキュラー影響度
+		XMFLOAT3 specular;
+		//アルファ
+		float alpha;
+		//テクスチャファイル名
+		std::string textureFilename;
+
+		//コンストラクタ
+		Material()
+		{
+			ambient = { 0.3f,0.3f,0.3f };
+			diffuse = { 0.0f,0.0f,0.0f };
+			specular = { 0.0f,0.0f,0.0f };
+			alpha = 1.0f;
+		}
+	};
+
 private: // 定数
 	static const int division = 50;					// 分割数
 	static const float radius;				// 底面の半径
@@ -216,4 +242,7 @@ private: // メンバ変数
 	XMMATRIX matWorld;
 	// 親オブジェクト
 	Object3d* parent = nullptr;
+
+	//マテリアル
+	static Material material;
 };
