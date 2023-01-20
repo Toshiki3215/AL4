@@ -426,7 +426,7 @@ void Object3d::CreateModel()
 	std::ifstream file;
 	// .objファイルを開く
 	/*file.open("Resources/triangle2/triangle2.obj");*/
-	const string modelname = "MiG-25PD";
+	const string modelname = "triangle_mat";
 	const string filename = modelname + ".obj"; //triangle_mat.obj
 	const string directoryPath = "Resources/" + modelname + "/"; //Resources/triangle_mat/
 	file.open(directoryPath + filename); //Resources/triangle_mat/triangle_mat.obj
