@@ -18,7 +18,7 @@ public:
 
 	DebugText();
 	~DebugText();
-
+	 
 	void Initialize(UINT texnumber);
 
 	void Print(const std::string & text, float x, float y, float size);
